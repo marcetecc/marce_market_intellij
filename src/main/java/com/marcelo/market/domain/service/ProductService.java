@@ -7,11 +7,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Service    //Agrega una diferenciacion semantica de que es esta clase. Es un servicio de nuestra logica de negocio
 public class ProductService {
-
     @Autowired
-    private ProductRepository productRepository;
+    private ProductRepository productRepository;        //Inyecta la interfaz ProductRepository
 
     public List<Product> getAll() {
         return productRepository.getAll();
